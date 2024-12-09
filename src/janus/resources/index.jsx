@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Row, Col, Card, Button, Tag } from 'antd'
 import { papersData } from '../home/data'
 import { FileOutlined, FilePdfOutlined } from '@ant-design/icons'
-import { downloadPdf, downloadPdfWithProgress } from '@/util/util'
+import { downloadPdf, downloadPdfWithProgress } from '@/utils/utils'
 
 export default function Resources() {
   const slides = [

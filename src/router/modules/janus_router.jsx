@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { Navigate } from 'react-router-dom'
 
-import LazyLoad from '../utils/LazyLoad'
+import LazyLoad from '../utils/lazy_load'
 import JanusLayout from '../../janus/layout'
 import JanusHomePage from '../../janus/home'
 export const JanusRouter = [
@@ -34,7 +34,7 @@ export const JanusRouter = [
         },
       },
       {
-        path: '/pdfPreview',
+        path: '/paper_preview',
         element: LazyLoad(
           React.lazy(() => import('../../janus/paper_preview'))
         ),
@@ -84,17 +84,6 @@ export const JanusRouter = [
       requiresAuth: false,
       title: 'demonstrations',
       key: 'demonstrations',
-    },
-  },
-  {
-    path: '/demonstrations/',
-    element: LazyLoad(
-      React.lazy(() => import('../../janus/demonstrations'))
-    ),
-    meta: {
-      requiresAuth: false,
-      title: 'demonstratio',
-      key: 'demonstratio',
     },
   },
 ]

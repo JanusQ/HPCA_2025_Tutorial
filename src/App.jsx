@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, HashRouter } from 'react-router-dom'
 import 'antd/dist/reset.css'
-import Router from './routes'
+import Router from './router'
 // import AuthRouter from './routes/utils/AuthRouter';
 export default function App() {
   return (

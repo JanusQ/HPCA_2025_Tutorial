@@ -2,33 +2,31 @@ import React, { useEffect, useState, useRef } from "react"
 import { Space, Table, Tag, Col, Row, Affix, Divider, Avatar } from "antd"
 import styles from "./index.module.scss"
 
-import janus from "../../assets/image/janusSwiper/Frame 3.svg"
-import paper from "../../assets/image/janusSwiper/paper.png"
-import Lightning from "../../assets/image/janusSwiper/Lightning.png"
+import janus from "../../assets/image/janus_swiper/Frame 3.svg"
+import paper from "../../assets/image/janus_swiper/paper.png"
+import Lightning from "../../assets/image/janus_swiper/Lightning.png"
 import { LinkOutlined, FileOutlined, FilePdfOutlined } from "@ant-design/icons"
 import {
   dataSource,
-  columns1,
+  columns,
   organizerData,
   papersData,
-  participatorData,
+  participantsData as participantsData,
 } from "./data"
 import Title from "@/components/Title"
-import { downloadPdf } from "@/util/util"
+import { downloadPdf } from "@/utils/utils"
 export default function JanusHomePage() {
-  const articleContent = useRef()
+  const homeContent = useRef()
   const Overview = useRef()
   const Schedule = useRef()
-  const Organizer = useRef()
-  const Speakers = useRef()
   const Links = useRef()
-  // const JanusQCloud = useRef()
-  const RealtedPapers = useRef()
-  // const gitRpepos = useRef()
+  const RelatedPapers = useRef()
+  const Organizer = useRef()
+  const Acknowledgment = useRef()
   const [windowHeight, setWindowHeight] = useState(0)
   const [showArticContentNav, setshowArticContentNav] = useState(false)
 
-  const articleNav = [
+  const homeNav = [
     {
       id: "Overview",
       name: "Overview",
@@ -42,22 +40,17 @@ export default function JanusHomePage() {
       name: "Links",
     },
     {
-      id: "RealtedPapers",
-      name: "Realted Papers",
+      id: "RelatedPapers",
+      name: "Related Papers",
     },
-
     {
-      id: "OrganizersAndPresenters",
+      id: "Organizers",
       name: "Organizers",
     },
-    // {
-    //   id: 'JanusQCloud',
-    //   name: 'JanusQ Cloud',
-    // },
-    // {
-    //   id: 'gitRpepos',
-    //   name: 'Repository',
-    // },
+    {
+      id: "Acknowledgment",
+      name: "Acknowledgment",
+    },
   ]
   const [navAcitve, setnavAcitve] = useState("Overview")
   const toClickContent = (content) => {
@@ -70,29 +63,22 @@ export default function JanusHomePage() {
       case "Schedule":
         topPosition = Schedule.current.offsetTop
         setnavAcitve("Schedule")
-
-        break
-      case "OrganizersAndPresenters":
-        topPosition = Organizer.current.offsetTop
-        setnavAcitve("OrganizersAndPresenters")
-
-        break
-      case "Speakers":
-        topPosition = Speakers.current.offsetTop
-        setnavAcitve("Speakers")
-
-        break
-
-      case "RealtedPapers":
-        topPosition = RealtedPapers.current.offsetTop
-        setnavAcitve("RealtedPapers")
-
         break
       case "Links":
         topPosition = Links.current.offsetTop
         setnavAcitve("Links")
-
         break
+      case "RelatedPapers":
+        topPosition = RelatedPapers.current.offsetTop
+        setnavAcitve("RelatedPapers")
+        break
+      case "Organizers":
+        topPosition = Organizer.current.offsetTop
+        setnavAcitve("Organizers")
+        break
+      case "Acknowledgment":
+        topPosition = Acknowledgment.current.offsetTop
+        setnavAcitve("Acknowledgment")
       default:
         break
     }
@@ -100,13 +86,13 @@ export default function JanusHomePage() {
   }
   useEffect(() => {
     setWindowHeight(document.body.clientHeight)
-    window.addEventListener("scroll", articleContentOnScroll)
+    window.addEventListener("scroll", homeContentOnScroll)
     return () => {
-      window.removeEventListener("scroll", articleContentOnScroll)
+      window.removeEventListener("scroll", homeContentOnScroll)
     }
   }, [])
 
-  const articleContentOnScroll = () => {
+  const homeContentOnScroll = () => {
     let scrollTop =
       window.scrollY ||
       document?.documentElement?.scrollTop ||
@@ -122,17 +108,20 @@ export default function JanusHomePage() {
     if (scrollTop > Links.current.offsetTop) {
       setnavAcitve("Links")
     }
-    if (scrollTop > RealtedPapers.current.offsetTop) {
+    if (scrollTop > RelatedPapers.current.offsetTop) {
       setnavAcitve("RealtedPapers")
     }
     if (scrollTop > Organizer.current.offsetTop) {
-      setnavAcitve("OrganizersAndPresenters")
+      setnavAcitve("Organizers")
+    }
+    if (scrollTop > Acknowledgment.current.offsetTop) {
+      setnavAcitve("Acknowledgment")
     }
   }
   return (
     <div className={styles.root}>
       <div className="home_content">
-        <div className="home_conten_item_1">
+        <div className="home_content_item_1">
           <Row justify="center">
             <Col span={18} offset={1}>
               <div className="entry_header">
@@ -141,8 +130,6 @@ export default function JanusHomePage() {
                     Janus 3.0: A Software Framework for Analyzing, Optimizing, Verifying, and Calibrating Quantum Circuit
                   </span>
                 </div>
-
-                {/* <h1 style={{ fontSize: "2.6rem" }}>Implementing Quantum Circuit</h1> */}
               </div>
               <div className="entry_image">
                 <img src={janus} alt=""></img>
@@ -150,20 +137,20 @@ export default function JanusHomePage() {
             </Col>
           </Row>
         </div>
-        <div className="home_conten_item_2">
+        <div className="home_content_item_2">
           <Row>
             <Col span={4}>
-              <div className="article_nav">
+              <div className="home_navigate">
                 <Affix offsetTop={0}>
-                  <div className="article_nav_content">
-                    {articleNav.map((item, index) => (
-                      <div className="articleNav" key={index}>
+                  <div className="home_navigate_content">
+                    {homeNav.map((item, index) => (
+                      <div className="home_navigate_menu" key={index}>
                         <span
                           onClick={() => toClickContent(item.id)}
                           className={
                             navAcitve === item.id
-                              ? "articleNav_active articleNav_item"
-                              : "articleNav_item"
+                              ? "home_navigate_active home_navigate_item"
+                              : "home_navigate_item"
                           }
                         >
                           {item.name}
@@ -176,58 +163,48 @@ export default function JanusHomePage() {
             </Col>
             <Col span={18}>
               <div
-                className="article_content"
-                onScroll={articleContentOnScroll}
-                ref={articleContent}
+                className="home_content"
+                onScroll={homeContentOnScroll}
+                ref={homeContent}
               >
-                <div className="article_overView" ref={Overview}>
-                  <div className="article_overView_titel">
-                    <h1
-                      style={{
-                        textAlign: "left",
-                        fontSize: "1.5rem",
-                        fontWeight: 700,
-                      }}
-                    >
+                <Divider />
+                <div className="home_overview" ref={Overview}>
+                  <div className="home_overview_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
                       Overview
                     </h1>
                   </div>
-                  <div className="articcle_overView_content">
-                    The paradigm of quantum computing exhibits a high potential to outperform classical computing in solving complex problems, e.g., cryptology, combinatorial optimization, and network analysis. However, achieving end-to-end speedup on the real-world quantum device is difficult as it involves a high degree of noise, high compilation overhead, and high cost of managing the quantum device. 
-                    
-                    In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce Janus-CT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce Janus-QPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce Janus-FEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce an application, Janus-SAT. It is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023).
+                  <div className="home_overview_content">
+                    The paradigm of quantum computing exhibits a high potential to outperform classical computing in solving complex problems, e.g., cryptology, combinatorial optimization, and network analysis. However, achieving end-to-end speedup on the real-world quantum device is difficult as it involves a high degree of noise, high compilation overhead, and high cost of managing the quantum device. In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce Janus-CT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce Janus-QPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce Janus-FEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce an application, Janus-SAT. It is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023).
+                  </div>
+                  <div className="home_overview_supplement">
+                    It is our second time to hold this tutorial! We have hosted the tutorial at ASPLOS'24 in San Diego, USA.
                   </div>
                 </div>
-                <div className="article_Scheule" ref={Schedule}>
-                  <div className="shedule_title">
-                    It is the second time to hold this tutorial!
-                  </div>
-                  <div className="article_Scheule_titel">
-                    <h1
-                      style={{
-                        textAlign: "left",
-                        fontSize: "1.5rem",
-                        fontWeight: 700,
-                      }}
-                    >
+                <Divider />
+                <div className="home_schedule" ref={Schedule}>
+                  <div className="home_schedule_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
                       Schedule
                     </h1>
                   </div>
-                  <div className="articcle_Scheule_content">
+                  <div className="home_schedule_content">
                     <Table
                       styles={{ fontSize: "1.8rem" }}
                       pagination={false}
                       dataSource={dataSource}
-                      columns={columns1}
+                      columns={columns}
                     ></Table>
                   </div>
                 </div>
-                <div className="janusq_clound_platform" ref={Links}>
-                  <div className="title">
-                    <h1> Links:</h1>
+                <div className="home_links" ref={Links}>
+                  <div className="home_links_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
+                      Links
+                    </h1>
                   </div>
-                  <div className="janusQ">
-                    <div className="Janusq_clound">
+                  <div className="home_links_content">
+                    <div className="home_links_outlined">
                       <h4>JanusQ cloud:</h4>
                       <a
                         href="http://janusq.zju.edu.cn"
@@ -240,75 +217,33 @@ export default function JanusHomePage() {
                         </span>
                       </a>
                     </div>
-                    <h4>
+                    <div className="home_links_outlined">
+                      <h4>Source code of JanusQ:</h4>
                       <a
+                        href="https://github.com/JanusQ/JanusQ"
                         target="_blank"
-                        href="https://github.com/JanusQ/JanusQ/tree/main"
                         rel="noreferrer"
                       >
-                        Source code of JanusQ
+                        github.com/JanusQ/JanusQ
+                        <span className="LinkOutlined">
+                          <LinkOutlined />
+                        </span>
                       </a>
-                    </h4>
-                    <h4>
-                      <a
-                        target="_blank"
-                        href="https://janusq.github.io/team/home"
-                        rel="noreferrer"
-                      >
-                        Website of our team
-                      </a>
-                    </h4>
-                  </div>
-                  <Divider />
-                  <div className="realted_papers" ref={RealtedPapers}>
-                    <div className="realted_papers_title">
-                      <h1
-                        style={{
-                          textAlign: "left",
-                          fontSize: "1.5rem",
-                          fontWeight: 700,
-                        }}
-                      >
-                        Related papers
-                      </h1>
                     </div>
-                    {papersData.map((item, index) => (
-                      <div className="realted_papers_content" key={index}>
-                        <div className="paper_title">{item.title}</div>
-                        <div className="paper_team">{item.team}</div>
-                        <div className="link">
-                          <a href={item.link} target="_blank">
-                            <div className="link_boder">
-                              <FileOutlined
-                                className="paper_icon"
-                                style={{ marginRight: 10 }}
-                              />
-                              {/* <img
-                                className="paper_icon"
-                                src={paper}
-                                alt=""
-                              ></img> */}
-                              URL
-                            </div>
-                          </a>
-
-                          <div
-                            className="link_boder"
-                            onClick={() => downloadPdf(item.pdf, item.title)}
-                          >
-                            {/* <img
-                              className="lighting_icon"
-                              src={Lightning}
-                              alt=""
-                            ></img> */}
-                            <FilePdfOutlined style={{ marginRight: 10 }} />
-                            Download PDF
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                    <div className="home_links_outlined">
+                      <h4>Website of our team:</h4>
+                      <a
+                        href="https://janusq.github.io/team/home"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        janusq.github.io/team/home
+                        <span className="LinkOutlined">
+                          <LinkOutlined />
+                        </span>
+                      </a>
+                    </div>
                   </div>
-                  <Divider />
                   {/* <div className="code">
                     <h4 className="title">Code</h4>
                     <div className="gitHub_link">
@@ -337,60 +272,98 @@ export default function JanusHomePage() {
                     </div>
                   </div> */}
                 </div>
-
-                <div ref={Organizer} className="speakers">
-                  <div className="speaker_title">
-                    <h1
-                      style={{ textAlign: "left", fontSize: "1.5rem" }}
-                      ref={Speakers}
-                    >
-                      Organizers
+                <Divider />
+                <div className="home_related_papers" ref={RelatedPapers}>
+                  <div className="home_related_papers_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
+                      Related Papers
                     </h1>
                   </div>
-                  <Divider />
-
-                  {organizerData.map((item, index) => (
-                    <div className="organizer_item" key={index}>
-                      <div className="speakers_1 speaker">
-                        <div className="photo">
-                          {/* <img src={item.photo} alt="" /> */}
-                          <Avatar src={item.photo} shape="square" size={100} />
-                        </div>
-                        <div className="speakers_1_content speaker_content">
-                          <div className="name">{item.name}</div>
-                          {item.introduce}
+                  {papersData.map((item, index) => (
+                    <div className="home_related_papers_content" key={index}>
+                      <div className="home_paper_title">{item.title}</div>
+                      <div className="home_paper_team">{item.team}</div>
+                      <div className="home_paper_link">
+                        <a href={item.link} target="_blank">
+                          <div className="link_boder">
+                            <FileOutlined
+                              className="paper_icon"
+                              style={{ marginRight: 10 }}
+                            />
+                            URL
+                          </div>
+                        </a>
+                        <div
+                          className="link_boder"
+                          onClick={() => downloadPdf(item.pdf, item.title)}
+                        >
+                          <FilePdfOutlined style={{ marginRight: 10 }} />
+                          Download PDF
                         </div>
                       </div>
                     </div>
                   ))}
                 </div>
-                <div className="participant">
-                  <div className="participant_content">
-                    Team members:
-                    {participatorData.map((item, index) => (
-                      <div className="participant_item" key={index}>
+                <Divider />
+                <div className="home_organizers" ref={Organizer}>
+                  <div className="home_organizers_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
+                      Organizers
+                    </h1>
+                  </div>
+                  <div className="home_speakers">
+                    <div className="home_speakers_title">
+                      <h2
+                        style={{ textAlign: "left", fontSize: "1.35rem" }}
+                      >
+                        Speakers
+                      </h2>
+                    </div>
+                    {organizerData.map((item, index) => (
+                      <div className="home_speaker_item" key={index}>
+                          <div className="home_speaker_photo">
+                            {/* <img src={item.photo} alt="" /> */}
+                            <Avatar src={item.photo} shape="square" size={100} />
+                          </div>
+                          <div className="home_speaker_content">
+                            <div className="home_speaker_name">{item.name}</div>
+                            {item.introduce}
+                          </div>
+                        </div>
+                    ))}
+                  </div>
+                  <div className="home_participants">
+                    <div className="home_participants_title">
+                      <h2
+                        style={{ textAlign: "left", fontSize: "1.35rem" }}
+                      >
+                        Team Members
+                      </h2>
+                    </div>
+                    {participantsData.map((item, index) => (
+                      <div className="home_participant_item" key={index}>
                         {item}
-                        {index !== participatorData.length - 1 ? "," : ""}
+                        {/* {index !== participantsData.length - 1 ? "," : ""} */}
                       </div>
                     ))}
                   </div>
                 </div>
-                <div className="participant">
-                  <div className="participant_content">
-                    Acknowledgment:
-                    <div className="participant_item">
-                      We thank Haohua Wang, Chao Song, Zhen Wang, and Qiujiang
-                      Guo for providing quantum hardware and essential support
-                      for the tutorial.
-                    </div>
+                <Divider />
+                <div className="home_acknowledgment" ref={Acknowledgment}>
+                  <div className="home_acknowledgment_title">
+                    <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
+                    Acknowledgment
+                    </h1>
+                  </div>
+                  <div className="home_acknowledgment_content">
+                    We thank Haohua Wang, Chao Song, Zhen Wang, and Qiujiang Guo for providing quantum hardware and essential support for the tutorial.
                   </div>
                 </div>
               </div>
             </Col>
             <Col span={12}></Col>
           </Row>
-
-          {/* <div className="article_content_right"></div> */}
+          {/* <div className="home_right"></div> */}
         </div>
       </div>
     </div>

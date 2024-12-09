@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-export default function PdfPreview({}) {
+export default function PaperPreview({}) {
   const {
     state: { pdf },
   } = useLocation()
