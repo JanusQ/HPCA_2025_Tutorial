@@ -1,7 +1,7 @@
 import React from "react"
 import { useRoutes, Navigate } from "react-router-dom"
 
-import { JanusRouter } from "./modules/JanusQuantum"
+import { JanusRouter } from "./modules/JanusQ"
 export const rootRouter = [
   ...JanusRouter,
   // {

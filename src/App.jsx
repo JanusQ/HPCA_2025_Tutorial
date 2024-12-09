@@ -6,7 +6,7 @@ import Router from './routes'
 export default function App() {
   return (
     <div id="main" style={{ width: '100%', height: '100%' }}>
-      <BrowserRouter basename="/tutorials">
+      <BrowserRouter basename="/HPCA_2025_Tutorial">
         <Router />
       </BrowserRouter>
     </div>

@@ -2,8 +2,8 @@ import React, { Suspense } from 'react'
 import { Navigate } from 'react-router-dom'
 
 import LazyLoad from '../utils/LazyLoad'
-import JanusLayout from './../../JanusQuantum/JanusLayout'
-import JanusHomePage from './../../JanusQuantum/JanusHomePage'
+import JanusLayout from '../../JanusQ/layout'
+import JanusHomePage from '../../JanusQ/home'
 export const JanusRouter = [
   {
     element: <JanusLayout />,
@@ -25,7 +25,7 @@ export const JanusRouter = [
       {
         path: '/resources',
         element: LazyLoad(
-          React.lazy(() => import('./../../JanusQuantum/Resources'))
+          React.lazy(() => import('../../JanusQ/resources'))
         ),
         meta: {
           requiresAuth: false,
@@ -36,7 +36,7 @@ export const JanusRouter = [
       {
         path: '/pdfPreview',
         element: LazyLoad(
-          React.lazy(() => import('./../../JanusQuantum/PdfPreview'))
+          React.lazy(() => import('../../JanusQ/paper_preview'))
         ),
         meta: {
           requiresAuth: false,
@@ -48,7 +48,7 @@ export const JanusRouter = [
       {
         path: '/tutorial_liealgebra',
         element: LazyLoad(
-          React.lazy(() => import('../../JanusQuantum/IpynbPreview'))
+          React.lazy(() => import('../../JanusQ/ipynb_preview'))
         ),
         meta: {
           requiresAuth: false,
@@ -58,7 +58,7 @@ export const JanusRouter = [
       },
       {
         path: '/test',
-        element: LazyLoad(React.lazy(() => import('@/pages/Test'))),
+        element: LazyLoad(React.lazy(() => import('@/pages/test'))),
         meta: {
           requiresAuth: false,
           title: 'test',
@@ -67,7 +67,7 @@ export const JanusRouter = [
       },
       {
         path: '/404',
-        element: LazyLoad(React.lazy(() => import('@/pages/ErrorMessage/404'))),
+        element: LazyLoad(React.lazy(() => import('@/pages/error/404'))),
       },
       // {
       //   path: '*',
@@ -78,7 +78,7 @@ export const JanusRouter = [
   {
     path: '/demonstrations/:fileName',
     element: LazyLoad(
-      React.lazy(() => import('../../JanusQuantum/Demonstrations'))
+      React.lazy(() => import('../../JanusQ/demonstrations'))
     ),
     meta: {
       requiresAuth: false,
@@ -89,7 +89,7 @@ export const JanusRouter = [
   {
     path: '/demonstrations/',
     element: LazyLoad(
-      React.lazy(() => import('../../JanusQuantum/Demonstrations'))
+      React.lazy(() => import('../../JanusQ/demonstrations'))
     ),
     meta: {
       requiresAuth: false,

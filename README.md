@@ -1,10 +1,3 @@
-# React + Vite
+# Janus 3.0: A Software Framework for Analyzing, Optimizing, Verifying, and Calibrating Quantum Circuit (Tutorial at HPCA 2025)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# 更新部署
-npm run deploy
+In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce Janus-CT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce Janus-QPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce Janus-FEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce an application, Janus-SAT. It is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023).

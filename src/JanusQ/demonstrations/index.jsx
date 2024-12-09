@@ -9,7 +9,7 @@ import {
   CheckOutlined,
   FormOutlined,
 } from '@ant-design/icons'
-import JanusHeader from '../JanusLayout/components/JanusHeader'
+import JanusHeader from '../layout/components/header'
 import NProgress from '@/components/Nprogress'
 export default function Demonstrations() {
   const navigate = useNavigate()
@@ -158,7 +158,7 @@ export default function Demonstrations() {
   const [showIpynb, setShowIpynb] = useState('')
   const loadipynb = async (name) => {
     NProgress.start()
-    const response = await fetch(`/tutorials/Ipynb/${name}.ipynb`)
+    const response = await fetch(`/HPCA_2025_Tutorial/Ipynb/${name}.ipynb`)
     const ipynbBlob = await response.blob()
     const reader = new FileReader()
     reader.onload = function () {

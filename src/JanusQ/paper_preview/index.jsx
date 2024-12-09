@@ -8,7 +8,7 @@ export default function PdfPreview({}) {
   return (
     <embed
       style={{ height: 1000 }}
-      src={`/tutorials/PDF/${pdf}.pdf`}
+      src={`/HPCA_2025_Tutorial/paper/${pdf}.pdf`}
       type="application/pdf"
       width="100%"
       height="100%"
