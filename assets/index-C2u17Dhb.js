@@ -1,0 +1,1 @@
+import{u as e,j as i}from"./index-DSHT6_j8.js";function s({}){const{state:{pdf:t}}=e();return i.jsx("embed",{style:{height:1e3},src:`/HPCA_2025_Tutorial/paper/${t}.pdf`,type:"application/pdf",width:"100%",height:"100%"})}export{s as default};
