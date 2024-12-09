@@ -138,8 +138,7 @@ export default function JanusHomePage() {
               <div className="entry_header">
                 <div className="header_title">
                   <span>
-                    Janus 2.0: A Software Framework for Analyzing Optimizing and
-                    Implementing Quantum Circuit
+                    Janus 3.0: A Software Framework for Analyzing, Optimizing, Verifying, and Calibrating Quantum Circuit
                   </span>
                 </div>
 
@@ -194,38 +193,14 @@ export default function JanusHomePage() {
                     </h1>
                   </div>
                   <div className="articcle_overView_content">
-                    The paradigm of quantum computing exhibits a high potential
-                    to outperform classical computing in solving complex
-                    problems, e.g., cryptology, combinatorial optimization, and
-                    network analysis. However, achieving end-to-end speedup on
-                    the real-world quantum device is difficult as it involves a
-                    high degree of noise, high compilation overhead, and high
-                    cost of managing the quantum device. In this tutorial, we
-                    present Janus 2.0, an open-source framework for analyzing
-                    and optimizing quantum circuits. This tutorial begins with a
-                    brief introduction to the JanusQ cloud platform, which is
-                    equipped with superconducting quantum processors developed
-                    by Zhejiang University (Science, 2019). Then, we present the
-                    tutorial of the Janus 2.0 toolkit, from the application
-                    level to the hardware level. We will introduce Janus-CT, a
-                    unified compilation framework that decouples analysis tasks
-                    into an upstream vectorization model and downstream models
-                    (MICRO 2023). We will provide the code and demo of two
-                    representative downstream tasks, including fidelity
-                    optimization and unitary decomposition. We then introduce
-                    Janus-FEM, a scalable quantum readout calibration based on
-                    the finite element method. Finally, we introduce Janus-SAT
-                    and Janus-CT. Janus-SAT is an application-software codesign
-                    technique for accelerating the solving of Boolean
-                    satisfiability (SAT) problems (HPCA 2023). Janus-TC is an
-                    example of simulating time crystal on a superconducting
-                    quantum computer. We will provide the code and demo to
-                    demonstrate the speedup of Janus-SAT.
+                    The paradigm of quantum computing exhibits a high potential to outperform classical computing in solving complex problems, e.g., cryptology, combinatorial optimization, and network analysis. However, achieving end-to-end speedup on the real-world quantum device is difficult as it involves a high degree of noise, high compilation overhead, and high cost of managing the quantum device. 
+                    
+                    In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce Janus-CT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce Janus-QPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce Janus-FEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce an application, Janus-SAT. It is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023).
                   </div>
                 </div>
                 <div className="article_Scheule" ref={Schedule}>
                   <div className="shedule_title">
-                    It is the first time to hold this tutorial!
+                    It is the second time to hold this tutorial!
                   </div>
                   <div className="article_Scheule_titel">
                     <h1

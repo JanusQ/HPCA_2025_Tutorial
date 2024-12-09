@@ -2,8 +2,8 @@ import React, { Suspense } from 'react'
 import { Navigate } from 'react-router-dom'
 
 import LazyLoad from '../utils/LazyLoad'
-import JanusLayout from '../../JanusQ/layout'
-import JanusHomePage from '../../JanusQ/home'
+import JanusLayout from '../../janus/layout'
+import JanusHomePage from '../../janus/home'
 export const JanusRouter = [
   {
     element: <JanusLayout />,
@@ -25,7 +25,7 @@ export const JanusRouter = [
       {
         path: '/resources',
         element: LazyLoad(
-          React.lazy(() => import('../../JanusQ/resources'))
+          React.lazy(() => import('../../janus/resources'))
         ),
         meta: {
           requiresAuth: false,
@@ -36,7 +36,7 @@ export const JanusRouter = [
       {
         path: '/pdfPreview',
         element: LazyLoad(
-          React.lazy(() => import('../../JanusQ/paper_preview'))
+          React.lazy(() => import('../../janus/paper_preview'))
         ),
         meta: {
           requiresAuth: false,
@@ -48,7 +48,7 @@ export const JanusRouter = [
       {
         path: '/tutorial_liealgebra',
         element: LazyLoad(
-          React.lazy(() => import('../../JanusQ/ipynb_preview'))
+          React.lazy(() => import('../../janus/ipynb_preview'))
         ),
         meta: {
           requiresAuth: false,
@@ -78,7 +78,7 @@ export const JanusRouter = [
   {
     path: '/demonstrations/:fileName',
     element: LazyLoad(
-      React.lazy(() => import('../../JanusQ/demonstrations'))
+      React.lazy(() => import('../../janus/demonstrations'))
     ),
     meta: {
       requiresAuth: false,
@@ -89,7 +89,7 @@ export const JanusRouter = [
   {
     path: '/demonstrations/',
     element: LazyLoad(
-      React.lazy(() => import('../../JanusQ/demonstrations'))
+      React.lazy(() => import('../../janus/demonstrations'))
     ),
     meta: {
       requiresAuth: false,
