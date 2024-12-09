@@ -1,0 +1,1 @@
+import{u as e,j as s}from"./index-CqZltBBP.js";function o({}){const{state:{pdf:t}}=e();return s.jsx("embed",{style:{height:1e3},src:`/tutorials/PDF/${t}.pdf`,type:"application/pdf",width:"100%",height:"100%"})}export{o as default};
