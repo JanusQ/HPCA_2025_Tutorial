@@ -3,12 +3,65 @@ import jianweiyin from "@/assets/image/janus_swiper/jianweiyin.png"
 import liqianglu from "@/assets/image/janus_swiper/liqianglu.jpg"
 import tansiwei from "@/assets/image/janus_swiper/tansiwei.png"
 import { downloadPdfWithProgress } from "@/utils/utils"
+export const columns = [
+  {
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        Time (TBD)
+      </div>
+    ),
+    dataIndex: "Time",
+    key: "Time",
+  },
+  // {
+  //   title: <div style={{  fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Time (EDT)</div>,
+  //   dataIndex: 'TimeEDT',
+  //   key: 'TimeEDT',
+  // },
+  {
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        Agenda
+      </div>
+    ),
+    dataIndex: "Agenda",
+    key: "Agenda",
+  },
+  {
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        Presenter
+      </div>
+    ),
+    dataIndex: "Presenter",
+    key: "Presenter",
+  },
+  {
+    title: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        Resource
+      </div>
+    ),
+    dataIndex: "Resource",
+    key: "Resource",
+  },
+  // {
+  //   title: 'Topic-1. Introduction of Janus quantum cloud platform ',
+  //   dataIndex: 'Topic',
+  //   key: 'Topic',
+  // },
+  // {
+  //   title: '0.25 hour',
+  //   dataIndex: 'hour',
+  //   key: 'hour',
+  // },
+]
 export const dataSource = [
   {
     key: "1",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.75 hour
+        0.5 hour
       </div>
     ),
     Agenda: (
@@ -17,15 +70,15 @@ export const dataSource = [
       </div>
     ),
     Presenter: "Liqiang Lu",
-    Resources: (
+    Resource: (
       <span>
         <Tag
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() => {
-              downloadPdfWithProgress("slide/1.1 Introduction v3", "1_1_Introduction")
-              downloadPdfWithProgress("slide/1.2 background v2", "1_2_Background")
-              downloadPdfWithProgress("slide/1.3 installation and janus cloud", "1_3_Installing_JanusQ")
+              downloadPdfWithProgress("slide/1_1_Introduction", "1_1_Introduction")
+              downloadPdfWithProgress("slide/1_2_Background", "1_2_Background")
+              downloadPdfWithProgress("slide/1_3_Installing_JanusQ", "1_3_Installing_JanusQ")
             }
           }
         >
@@ -47,13 +100,13 @@ export const dataSource = [
       </div>
     ),
     Presenter: "Tianyao Chu",
-    Resources: (
+    Resource: (
       <span>
         <Tag
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/3. janus-ct", "2_Janus_CT")
+            downloadPdfWithProgress("slide/2_Janus_CT", "2_Janus_CT")
           }
         >
           slide
@@ -102,13 +155,13 @@ export const dataSource = [
       </div>
     ),
     Presenter: "Debin Xiang",
-    Resources: (
+    Resource: (
       <span>
         <Tag
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/4. janus-fem v3", "3_Janus_QPV")
+            downloadPdfWithProgress("slide/3_Janus_QPV", "3_Janus_QPV")
           }
         >
           slide
@@ -144,13 +197,13 @@ export const dataSource = [
       </div>
     ),
     Presenter: "Tianyao Chu",
-    Resources: (
+    Resource: (
       <span>
         <Tag
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/4. janus-fem v3", "4_Janus_FEM")
+            downloadPdfWithProgress("slide/4_Janus_FEM", "4_Janus_FEM")
           }
         >
           slide
@@ -181,13 +234,13 @@ export const dataSource = [
       </div>
     ),
     Presenter: "Siwei Tan",
-    Resources: (
+    Resource: (
       <span>
         <Tag
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/5.1 janus-sat", "5_Janus_SAT")
+            downloadPdfWithProgress("slide/5_Janus_SAT", "5_Janus_SAT")
           }
         >
           slide
@@ -214,7 +267,7 @@ export const dataSource = [
     key: "17",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.5 hour
+        0.75 hour
       </div>
     ),
     Agenda: (
@@ -287,86 +340,37 @@ export const dataSource = [
 //     hour: "4 hours(half day)",
 //   },
 // ]
-export const columns = [
-  {
-    title: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        Time (TBD)
-      </div>
-    ),
-    dataIndex: "Time",
-    key: "Time",
-  },
-  // {
-  //   title: <div style={{  fontWeight: 800, fontFamily: 'PingFang_HEAVY' }}>Time (EDT)</div>,
-  //   dataIndex: 'TimeEDT',
-  //   key: 'TimeEDT',
-  // },
-  {
-    title: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        Agenda
-      </div>
-    ),
-    dataIndex: "Agenda",
-    key: "Agenda",
-  },
-  {
-    title: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        Presenter
-      </div>
-    ),
-    dataIndex: "Presenter",
-    key: "Presenter",
-  },
-  {
-    title: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        Resources
-      </div>
-    ),
-    dataIndex: "Resources",
-    key: "Resources",
-  },
-  // {
-  //   title: 'Topic-1. Introduction of Janus quantum cloud platform ',
-  //   dataIndex: 'Topic',
-  //   key: 'Topic',
-  // },
-  // {
-  //   title: '0.25 hour',
-  //   dataIndex: 'hour',
-  //   key: 'hour',
-  // },
-]
-export const papersData = [
+export const paperData = [
   {
     title: `[MICRO 2023] QuCT: A Framework for Analyzing Quantum Circuit by Extracting Contextual and Topological Features`,
-    team: `Siwei Tan, Congliang Lang, Liang Xiang, Shudi Wang, Xinghui Jia, Ziqi Tan, Tingting Li (Zhejiang University), Jieming Yin (Nanjing University of Posts and Telecommunications), Yongheng Shang, Andre Python, Liqiang Lu, Jianwei Yin (Zhejiang University)`,
+    team: `Siwei Tan, Congliang Lang, Liang Xiang, Shudi Wang, Xinghui Jia, Ziqi Tan, Tingting Li (Zhejiang University), Jieming Yin (Nanjing University of Posts and Telecommunications), Yongheng Shang, Andre Python, Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
     link: "https://dl.acm.org/doi/10.1145/3613424.3614274",
-    pdf: "QuCT",
+    pdf: "paper/MICRO_2023_QuCT",
+    download_name: "MICRO_2023_QuCT",
   },
   {
     title: `[ASPLOS 2024] MorphQPV: Exploiting Isomorphism in Quantum Programs to Facilitate Confident Verification`,
     team: `Siwei Tan, Debin Xiang, Liqiang Lu (Zhejiang University), Junlin Lu (Peking University), Qiuping Jiang (Ningbo University), Mingshuai Chen, and Jianwei Yin (Zhejiang University)`,
     link: "https://doi.org/10.1145/3620666.3651360",
-    pdf: "MorphQPV",
+    pdf: "paper/ASPLOS_2024_MorphQPV",
+    download_name: "ASPLOS_2024_MorphQPV",
   },
   {
     title: `[ASPLOS 2024] QuFEM: Fast and Accurate Quantum Readout Calibration Using the Finite Element Method`,
     team: `Siwei Tan, Hanyu Zhang, Jia Yu, Congliang Lang, Xinkui Zhao, Mingshuai Chen (Zhejiang University), Yun Liang (Peking University), Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
     link: "https://doi.org/10.1145/3620665.3640380",
-    pdf: "QuFEM",
+    pdf: "paper/ASPLOS_2024_QuFEM",
+    download_name: "ASPLOS_2024_QuFEM",
   },
   {
     title: `[HPCA 2023] HyQSAT: A Hybrid Approach for 3-SAT Problems by Integrating Quantum Annealer with CDCL`,
-    team: `Siwei Tan, Mingqian Yu, Andre Python, Yongheng Shang, Tingting Li, Liqiang Lu, Jianwei Yin (Zhejiang University)`,
+    team: `Siwei Tan, Mingqian Yu, Andre Python, Yongheng Shang, Tingting Li, Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
     link: "https://ieeexplore.ieee.org/document/10071022",
-    pdf: "HyQSAT",
+    pdf: "paper/HPCA_2023_HyQSAT",
+    download_name: "HPCA_2023_HyQSAT",
   },
 ]
-export const organizerData = [
+export const speakerData = [
   {
     name: "Jianwei Yin",
     photo: jianweiyin,
@@ -386,7 +390,7 @@ export const organizerData = [
       "Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.He has published more than 14 papers in top journals and conferences, including MICRO, HPCA, ASPLOS, DAC, VIS and TVCG.",
   },
 ]
-export const participantsData = [
+export const participantData = [
   "Chenning Tao",
   "Yifan Guo",
   "Xinghui Jia",

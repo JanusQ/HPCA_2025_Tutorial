@@ -23,14 +23,14 @@ export const JanusRouter = [
         },
       },
       {
-        path: '/resources',
+        path: '/resource',
         element: LazyLoad(
-          React.lazy(() => import('../../janus/resources'))
+          React.lazy(() => import('../../janus/resource'))
         ),
         meta: {
           requiresAuth: false,
-          title: 'resources',
-          key: 'resources',
+          title: 'resource',
+          key: 'resource',
         },
       },
       {
@@ -40,20 +40,20 @@ export const JanusRouter = [
         ),
         meta: {
           requiresAuth: false,
-          title: 'pdfPreview',
-          key: 'pdfPreview',
+          title: 'paper_preview',
+          key: 'paper_preview',
         },
       },
 
       {
-        path: '/tutorial_liealgebra',
+        path: '/ipynb_preview',
         element: LazyLoad(
           React.lazy(() => import('../../janus/ipynb_preview'))
         ),
         meta: {
           requiresAuth: false,
-          title: 'tutorial_liealgebra',
-          key: 'tutorial_liealgebra',
+          title: 'ipynb_preview',
+          key: 'ipynb_preview',
         },
       },
       {
@@ -62,7 +62,7 @@ export const JanusRouter = [
         meta: {
           requiresAuth: false,
           title: 'test',
-          key: 'tes',
+          key: 'test',
         },
       },
       {
@@ -76,14 +76,25 @@ export const JanusRouter = [
     ],
   },
   {
-    path: '/demonstrations/:fileName',
+    path: '/demo/:fileName',
     element: LazyLoad(
-      React.lazy(() => import('../../janus/demonstrations'))
+      React.lazy(() => import('../../janus/demo/index'))
     ),
     meta: {
       requiresAuth: false,
-      title: 'demonstrations',
-      key: 'demonstrations',
+      title: 'demo_file',
+      key: 'demo_file',
+    },
+  },
+  {
+    path: '/demo',
+    element: LazyLoad(
+      React.lazy(() => import('../../janus/demo/index'))
+    ),
+    meta: {
+      requiresAuth: false,
+      title: 'demo',
+      key: 'demo',
     },
   },
 ]

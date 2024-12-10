@@ -156,14 +156,14 @@
               }
             }
           }
-          .home_links {
+          .home_link {
             margin-top: 40px;
-            .home_links_title {
+            .home_link_title {
               font-family: PingFang_HEAVY;
             }
-            .home_links_content {
+            .home_link_content {
               margin-top: 10px;
-              .home_links_outlined {
+              .home_link_outlined {
                 display: flex;
                 h4 {
                   text-align: left;
@@ -209,12 +209,12 @@
             }
             margin-bottom: 30px;
           }
-          .home_related_papers {
+          .home_related_paper {
             text-align: justify;
-            .home_related_papers_title {
+            .home_related_paper_title {
               font-family: PingFang_HEAVY;
             }
-            .home_related_papers_content {
+            .home_related_paper_content {
               .home_paper_title {
                 font-weight: 800;
                 font-family: PingFang_HEAVY;
@@ -295,15 +295,15 @@
           //     }
           //   }
           // }
-          .home_organizers {
-            .home_organizers_title {
+          .home_organizer {
+            .home_organizer_title {
               h1 {
                 font-family: PingFang_HEAVY;
                 font-weight: 700;
               }
             }
-            .home_speakers {
-              .home_speakers_title {
+            .home_speaker {
+              .home_speaker_title {
                 h2 {
                   font-family: PingFang_HEAVY;
                   font-weight: 600;
@@ -341,8 +341,8 @@
                 border-bottom: 1px solid rgb(240, 240, 240);
               }
             }
-            .home_participants {
-              .home_participants_title {
+            .home_participant {
+              .home_participant_title {
                 h2 {
                   font-family: PingFang_HEAVY;
                   font-weight: 600;

@@ -9,12 +9,12 @@ import { LinkOutlined, FileOutlined, FilePdfOutlined } from "@ant-design/icons"
 import {
   dataSource,
   columns,
-  organizerData,
-  papersData,
-  participantsData as participantsData,
+  speakerData,
+  paperData,
+  participantData
 } from "./data"
 import Title from "@/components/Title"
-import { downloadPdf } from "@/utils/utils"
+import { downloadPdf, downloadPdfWithProgress } from "@/utils/utils"
 export default function JanusHomePage() {
   const homeContent = useRef()
   const Overview = useRef()
@@ -36,16 +36,16 @@ export default function JanusHomePage() {
       name: "Schedule",
     },
     {
-      id: "Links",
-      name: "Links",
+      id: "Link",
+      name: "Link",
     },
     {
-      id: "RelatedPapers",
-      name: "Related Papers",
+      id: "RelatedPaper",
+      name: "Related Paper",
     },
     {
-      id: "Organizers",
-      name: "Organizers",
+      id: "Organizer",
+      name: "Organizer",
     },
     {
       id: "Acknowledgment",
@@ -64,17 +64,17 @@ export default function JanusHomePage() {
         topPosition = Schedule.current.offsetTop
         setnavAcitve("Schedule")
         break
-      case "Links":
+      case "Link":
         topPosition = Links.current.offsetTop
-        setnavAcitve("Links")
+        setnavAcitve("Link")
         break
-      case "RelatedPapers":
+      case "RelatedPaper":
         topPosition = RelatedPapers.current.offsetTop
-        setnavAcitve("RelatedPapers")
+        setnavAcitve("RelatedPaper")
         break
-      case "Organizers":
+      case "Organizer":
         topPosition = Organizer.current.offsetTop
-        setnavAcitve("Organizers")
+        setnavAcitve("Organizer")
         break
       case "Acknowledgment":
         topPosition = Acknowledgment.current.offsetTop
@@ -106,13 +106,13 @@ export default function JanusHomePage() {
       setnavAcitve("Schedule")
     }
     if (scrollTop > Links.current.offsetTop) {
-      setnavAcitve("Links")
+      setnavAcitve("Link")
     }
     if (scrollTop > RelatedPapers.current.offsetTop) {
-      setnavAcitve("RealtedPapers")
+      setnavAcitve("RealtedPaper")
     }
     if (scrollTop > Organizer.current.offsetTop) {
-      setnavAcitve("Organizers")
+      setnavAcitve("Organizer")
     }
     if (scrollTop > Acknowledgment.current.offsetTop) {
       setnavAcitve("Acknowledgment")
@@ -197,14 +197,14 @@ export default function JanusHomePage() {
                     ></Table>
                   </div>
                 </div>
-                <div className="home_links" ref={Links}>
-                  <div className="home_links_title">
+                <div className="home_link" ref={Links}>
+                  <div className="home_link_title">
                     <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
-                      Links
+                      Link
                     </h1>
                   </div>
-                  <div className="home_links_content">
-                    <div className="home_links_outlined">
+                  <div className="home_link_content">
+                    <div className="home_link_outlined">
                       <h4>JanusQ cloud:</h4>
                       <a
                         href="http://janusq.zju.edu.cn"
@@ -217,7 +217,7 @@ export default function JanusHomePage() {
                         </span>
                       </a>
                     </div>
-                    <div className="home_links_outlined">
+                    <div className="home_link_outlined">
                       <h4>Source code of JanusQ:</h4>
                       <a
                         href="https://github.com/JanusQ/JanusQ"
@@ -230,7 +230,7 @@ export default function JanusHomePage() {
                         </span>
                       </a>
                     </div>
-                    <div className="home_links_outlined">
+                    <div className="home_link_outlined">
                       <h4>Website of our team:</h4>
                       <a
                         href="https://janusq.github.io/team/home"
@@ -273,14 +273,14 @@ export default function JanusHomePage() {
                   </div> */}
                 </div>
                 <Divider />
-                <div className="home_related_papers" ref={RelatedPapers}>
-                  <div className="home_related_papers_title">
+                <div className="home_related_paper" ref={RelatedPapers}>
+                  <div className="home_related_paper_title">
                     <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
-                      Related Papers
+                      Related Paper
                     </h1>
                   </div>
-                  {papersData.map((item, index) => (
-                    <div className="home_related_papers_content" key={index}>
+                  {paperData.map((item, index) => (
+                    <div className="home_related_paper_content" key={index}>
                       <div className="home_paper_title">{item.title}</div>
                       <div className="home_paper_team">{item.team}</div>
                       <div className="home_paper_link">
@@ -295,7 +295,7 @@ export default function JanusHomePage() {
                         </a>
                         <div
                           className="link_boder"
-                          onClick={() => downloadPdf(item.pdf, item.title)}
+                          onClick={() => downloadPdfWithProgress(item.pdf, item.download_name)}
                         >
                           <FilePdfOutlined style={{ marginRight: 10 }} />
                           Download PDF
@@ -305,21 +305,21 @@ export default function JanusHomePage() {
                   ))}
                 </div>
                 <Divider />
-                <div className="home_organizers" ref={Organizer}>
-                  <div className="home_organizers_title">
+                <div className="home_organizer" ref={Organizer}>
+                  <div className="home_organizer_title">
                     <h1 style={{ textAlign: "left", fontSize: "1.5rem", fontWeight: 700 }} >
-                      Organizers
+                      Organizer
                     </h1>
                   </div>
-                  <div className="home_speakers">
-                    <div className="home_speakers_title">
+                  <div className="home_speaker">
+                    <div className="home_speaker_title">
                       <h2
                         style={{ textAlign: "left", fontSize: "1.35rem" }}
                       >
-                        Speakers
+                        Speaker
                       </h2>
                     </div>
-                    {organizerData.map((item, index) => (
+                    {speakerData.map((item, index) => (
                       <div className="home_speaker_item" key={index}>
                           <div className="home_speaker_photo">
                             {/* <img src={item.photo} alt="" /> */}
@@ -332,15 +332,15 @@ export default function JanusHomePage() {
                         </div>
                     ))}
                   </div>
-                  <div className="home_participants">
-                    <div className="home_participants_title">
+                  <div className="home_participant">
+                    <div className="home_participant_title">
                       <h2
                         style={{ textAlign: "left", fontSize: "1.35rem" }}
                       >
-                        Team Members
+                        Team Member
                       </h2>
                     </div>
-                    {participantsData.map((item, index) => (
+                    {participantData.map((item, index) => (
                       <div className="home_participant_item" key={index}>
                         {item}
                         {/* {index !== participantsData.length - 1 ? "," : ""} */}

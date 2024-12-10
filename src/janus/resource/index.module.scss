@@ -15,10 +15,9 @@
         font-size: 1.5rem;
         line-height: 1.5rem;
       }
-      .publications {
-        .realted_papers_content {
+      .publication {
+        .publication_item {
           margin-top: 30px;
-
           margin-bottom: 20px;
           .paper_title {
             font-weight: 800;
@@ -80,18 +79,18 @@
           }
         }
       }
-      .slides {
+      .slide {
         margin-top: 50px;
-        .slides_content {
+        .slide_content {
           margin-top: 30px;
-          .slides_item {
+          .slide_item {
             // display: flex;
             // align-items: center;
             .pdf_title {
-              font-family: PingFang_REGULAR;
+              font-weight: 800;
+              font-family: PingFang_HEAVY;
               font-size: 1rem;
               line-height: 1.5rem;
-              margin-right: 10px;
             }
             .link {
               // margin-top: 20px;
@@ -137,7 +136,7 @@
               }
             }
             .operate {
-              // margin-top: 10px;
+              margin-top: 10px;
             }
           }
         }

@@ -74,9 +74,9 @@
         -webkit-box-orient: vertical;
         // overflow: hidden;
         // text-overflow: ellipsis;
-        -webkit-line-clamp: 2; /* 控制显示的行数 */
+        line-clamp: 2;
         text-align: left;
-        // max-height: 2em; /* 控制最大高度，可以根据需要调整 */
+        // max-height: 2em;
       }
     }
   }
