@@ -151,7 +151,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        3. Janus-QPV Details
+        3. Janus-QPV Details (TBD)
       </div>
     ),
     Presenter: "Debin Xiang",
@@ -267,12 +267,54 @@ export const dataSource = [
     key: "17",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        0.5 hour
+      </div>
+    ),
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        6. Janus-QAOA Details (TBD)
+      </div>
+    ),
+    Presenter: "Debin Xiang",
+    Resource: (
+      <span>
+        <Tag
+          color={"green"}
+          style={{ cursor: "pointer" }}
+          onClick={() =>
+            downloadPdfWithProgress("slide/6_Janus_QAOA", "6_Janus_QAOA")
+          }
+        >
+          slide
+        </Tag>
+      </span>
+    ),
+  },
+  {
+    key: "18",
+    Time: "0.125 hour",
+    Agenda: "Introduction of constained binary optimization problem",
+  },
+  {
+    key: "19",
+    Time: "0.25 hour",
+    Agenda: "Janus-QAOA overview",
+  },
+  {
+    key: "20",
+    Time: "0.125 hour",
+    Agenda: "Achieving speedup on real-world problems",
+  },
+  {
+    key: "21",
+    Time: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
         0.75 hour
       </div>
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        6. Q & A
+        7. Q & A
       </div>
     ),
     Presenter: "Siwei Tan",
@@ -368,6 +410,13 @@ export const paperData = [
     link: "https://ieeexplore.ieee.org/document/10071022",
     pdf: "paper/HPCA_2023_HyQSAT",
     download_name: "HPCA_2023_HyQSAT",
+  },
+  {
+    title: `[HPCA 2025] Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization (Accepted)`,
+    team: `Debin Xiang, Qifan Jiang, Liqiang Lu, Siwei Tan, Jianwei Yin (Zhejiang University)`,
+    link: "https://ieeexplore.ieee.org/document/TBD",
+    pdf: "paper/HPCA_2025_ChocoQ",
+    download_name: "HPCA_2025_ChocoQ",
   },
 ]
 export const speakerData = [

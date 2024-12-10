@@ -30,7 +30,7 @@ export default function Resources() {
       download_name: '2_Janus_CT',
     },
     {
-      title: '3. Janus-QPV',
+      title: '3. Janus-QPV (TBD)',
       pdf: 'slide/3_Janus_QPV',
       download_name: '3_Janus_QPV',
     },
@@ -43,6 +43,11 @@ export default function Resources() {
       title: '5. Janus-SAT',
       pdf: 'slide/5_Janus_SAT',
       download_name: '5_Janus_SAT',
+    },
+    {
+      title: '6. Janus-QAOA (TBD)',
+      pdf: 'slide/6_Janus_QAOA',
+      download_name: '6_Janus_QAOA',
     },
   ]
   // const videos = [

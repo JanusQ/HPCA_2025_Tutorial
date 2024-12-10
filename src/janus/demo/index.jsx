@@ -111,6 +111,18 @@ export default function Demonstrations() {
         },
       ],
     },
+    {
+      title: 'Janus-QAOA',
+      key: '6',
+      icon: <CarryOutOutlined />,
+      children: [
+        {
+          title: 'Constained binary optimization with QAOA',
+          key: '6_1_solve_constained_binary_optimization_problem',
+          icon: <CarryOutOutlined />,
+        },
+      ],
+    },
   ]
   const [showIpynb, setShowIpynb] = useState('')
   const loadipynb = async (name) => {
