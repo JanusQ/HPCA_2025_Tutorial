@@ -87,11 +87,11 @@ export default function JanusLayout() {
     },
     {
       key: '3',
-      label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-SAT</Link>,
+      label: <Link tyle={{ fontSize: 18, color: 'black' }}>HyQSAT</Link>,
     },
     {
       key: '4',
-      label: <Link tyle={{ fontSize: 18, color: 'black' }}>Janus-CT</Link>,
+      label: <Link tyle={{ fontSize: 18, color: 'black' }}>QuCT</Link>,
     },
     {
       key: '5',

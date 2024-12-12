@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react"
 import { Space, Table, Tag, Col, Row, Affix, Divider, Avatar } from "antd"
 import styles from "./index.module.scss"
 
-import janus from "../../assets/image/janus_swiper/Frame 3.svg"
+import janus from "../../assets/image/janus_swiper/janus3_overview.svg"
 import paper from "../../assets/image/janus_swiper/paper.png"
 import Lightning from "../../assets/image/janus_swiper/Lightning.png"
 import { LinkOutlined, FileOutlined, FilePdfOutlined } from "@ant-design/icons"
@@ -175,7 +175,7 @@ export default function JanusHomePage() {
                     </h1>
                   </div>
                   <div className="home_overview_content">
-                    The paradigm of quantum computing exhibits a high potential to outperform classical computing in solving complex problems, e.g., cryptology, combinatorial optimization, and network analysis. However, achieving end-to-end speedup on the real-world quantum device is difficult as it involves a high degree of noise, high compilation overhead, and high cost of managing the quantum device. In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce Janus-CT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce Janus-QPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce Janus-FEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce an application, Janus-SAT. It is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023).
+                    In this tutorial, we present Janus 3.0, an open-source framework with new features. This tutorial begins with a brief introduction to the Janus quantum cloud platform (janusq.zju.edu.cn), which can connect with the superconducting processors developed by Zhejiang University. Then, we provide the tutorial of the Janus 3.0 toolkit. To analyze the circuit, we introduce QuCT, a unified compilation framework that decouples analysis tasks into an upstream vectorization model and downstream models (MICRO 2023). Our vectorization technique helps to extract both contextual and topological features, enabling rigorous downstream optimization tasks. To optimize the circuit, we provide the code and demo of two representative downstream tasks, including fidelity optimization and unitary decomposition. To verify the correctness of the circuit, we introduce MorphQPV, which enables confident quantum program verification and repair by exploiting the isomorphism (ASPLOS 2024). We will introduce a flexible assertion statement method with an automatic validation flow. To calibrate the circuit output, we introduce QuFEM, a readout calibration method inspired by the finite element method. We will introduce the characterization of the readout error on various quantum devices and our fast and accurate calibration method with a code demonstration (ASPLOS 2024). Finally, we introduce two quantum applications, HyQSAT and Choco-Q. HyQSAT is an application-software codesign technique for accelerating solving Boolean satisfiability (SAT) problems (HPCA 2023). Choco-Q is an enhance version of QAOA based on commute Hamiltonian for constrained binary optimization problems (HPCA 2025).
                   </div>
                   <div className="home_overview_supplement">
                     It is our second time to hold this tutorial! We have hosted the tutorial at ASPLOS'24 in San Diego, USA.
@@ -248,7 +248,7 @@ export default function JanusHomePage() {
                     <h4 className="title">Code</h4>
                     <div className="gitHub_link">
                       <a>
-                        Janus-SAT
+                        HyQSAT
                         <span className="LinkOutlined">
                           <LinkOutlined />
                         </span>
@@ -256,7 +256,7 @@ export default function JanusHomePage() {
                     </div>
                     <div className="gitHub_link">
                       <a>
-                        Janus-CT
+                        QuCT
                         <span className="LinkOutlined">
                           <LinkOutlined />
                         </span>

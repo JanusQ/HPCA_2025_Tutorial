@@ -2,6 +2,7 @@ import { Tag } from "antd"
 import jianweiyin from "@/assets/image/janus_swiper/jianweiyin.png"
 import liqianglu from "@/assets/image/janus_swiper/liqianglu.jpg"
 import tansiwei from "@/assets/image/janus_swiper/tansiwei.png"
+import tianyaochu from "@/assets/image/janus_swiper/tianyaochu.jpg"
 import { downloadPdfWithProgress } from "@/utils/utils"
 export const columns = [
   {
@@ -96,7 +97,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        2. Janus-CT Details
+        2. QuCT Details
       </div>
     ),
     Presenter: "Tianyao Chu",
@@ -106,7 +107,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/2_Janus_CT", "2_Janus_CT")
+            downloadPdfWithProgress("slide/2_QuCT", "2_QuCT")
           }
         >
           slide
@@ -151,7 +152,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        3. Janus-QPV Details (TBD)
+        3. MorphQPV Details (TBD)
       </div>
     ),
     Presenter: "Debin Xiang",
@@ -161,7 +162,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/3_Janus_QPV", "3_Janus_QPV")
+            downloadPdfWithProgress("slide/3_MorphQPV", "3_MorphQPV")
           }
         >
           slide
@@ -172,7 +173,7 @@ export const dataSource = [
   {
     key: "7",
     Time: "0.5 hour",
-    Agenda: "Janus-QPV overview",
+    Agenda: "MorphQPV overview",
   },
   {
     key: "8",
@@ -193,7 +194,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        4. Janus-FEM Details
+        4. QuFEM Details
       </div>
     ),
     Presenter: "Tianyao Chu",
@@ -203,7 +204,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/4_Janus_FEM", "4_Janus_FEM")
+            downloadPdfWithProgress("slide/4_QuFEM", "4_QuFEM")
           }
         >
           slide
@@ -219,7 +220,7 @@ export const dataSource = [
   {
     key: "12",
     Time: "0.25 hour",
-    Agenda: "Readout calibration using Janus-FEM",
+    Agenda: "Readout calibration using QuFEM",
   },
   {
     key: "13",
@@ -230,7 +231,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        5. Janus-SAT Details
+        5. HyQSAT Details
       </div>
     ),
     Presenter: "Siwei Tan",
@@ -240,7 +241,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/5_Janus_SAT", "5_Janus_SAT")
+            downloadPdfWithProgress("slide/5_HyQSAT", "5_HyQSAT")
           }
         >
           slide
@@ -256,7 +257,7 @@ export const dataSource = [
   {
     key: "15",
     Time: "0.25 hour",
-    Agenda: "Janus-SAT overview",
+    Agenda: "HyQSAT overview",
   },
   {
     key: "16",
@@ -272,7 +273,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        6. Janus-QAOA Details (TBD)
+        6. Choco-Q Details (TBD)
       </div>
     ),
     Presenter: "Debin Xiang",
@@ -282,7 +283,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/6_Janus_QAOA", "6_Janus_QAOA")
+            downloadPdfWithProgress("slide/6_Choco-Q", "6_Choco-Q")
           }
         >
           slide
@@ -298,7 +299,7 @@ export const dataSource = [
   {
     key: "19",
     Time: "0.25 hour",
-    Agenda: "Janus-QAOA overview",
+    Agenda: "Choco-Q overview",
   },
   {
     key: "20",
@@ -323,7 +324,7 @@ export const dataSource = [
 // export const dataSource1 = [
 //   {
 //     key: "1",
-//     Topic: "Topic-2. Janus-CT Details",
+//     Topic: "Topic-2. QuCT Details",
 //     hour: "(2 hour)",
 //   },
 //   {
@@ -415,8 +416,8 @@ export const paperData = [
     title: `[HPCA 2025] Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization (Accepted)`,
     team: `Debin Xiang, Qifan Jiang, Liqiang Lu, Siwei Tan, Jianwei Yin (Zhejiang University)`,
     link: "https://ieeexplore.ieee.org/document/TBD",
-    pdf: "paper/HPCA_2025_ChocoQ",
-    download_name: "HPCA_2025_ChocoQ",
+    pdf: "paper/HPCA_2025_Choco-Q",
+    download_name: "HPCA_2025_Choco-Q",
   },
 ]
 export const speakerData = [
@@ -436,7 +437,13 @@ export const speakerData = [
     name: "Siwei Tan",
     photo: tansiwei,
     introduce:
-      "Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture.He has published more than 14 papers in top journals and conferences, including MICRO, HPCA, ASPLOS, DAC, VIS and TVCG.",
+      "Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture. He has published more than 14 papers in top journals and conferences, including MICRO, HPCA, ASPLOS, DAC, VIS and TVCG.",
+  },
+  {
+    name: "Tianyao Chu",
+    photo: tianyaochu,
+    introduce:
+      "Tianyao Chu is a first year PhD student at Zhejiang University. His interests include multinode quantum computing and quantum communication network. His project was funded by National Natural Science Foundation of China - the first Basic Research Project for Young Students (Undergraduate).",
   },
 ]
 export const participantData = [
@@ -446,5 +453,4 @@ export const participantData = [
   "Hanyu Zhang",
   "Congliang Lang",
   "Debing Xiang",
-  "Tianyao Chu",
 ]

@@ -34,32 +34,32 @@ export default function Demonstrations() {
       ],
     },
     {
-      title: 'Janus-CT',
+      title: 'QuCT',
       key: '2',
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Vectorization model of Janus-CT',
+          title: 'Vectorization model of QuCT',
           key: '2_1_vectorization',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'Fidelity prediction of JanusQ-CT on quantum simulators',
+          title: 'Fidelity prediction of QuCT on quantum simulators',
           key: '2_2_fidelity_prediction_simulator',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'Fidelity prediction of JanusQ-CT on real quantum devices',
+          title: 'Fidelity prediction of QuCT on real quantum devices',
           key: '2_3_fidelity_prediction_realqc',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'Fidelity optimization based on JanusQ-CT',
+          title: 'Fidelity optimization based on QuCT',
           key: '2_4_fidelity_optimization',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'Unitary decomposition based on JanusQ-CT',
+          title: 'Unitary decomposition based on QuCT',
           key: '2_5_unitary_decomposition',
           icon: <CarryOutOutlined />,
         },
@@ -71,36 +71,36 @@ export default function Demonstrations() {
       ],
     },
     {
-      title: 'Janus-QPV',
+      title: 'MorphQPV',
       key: '3',
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Assertion statement of Janus-QPV',
+          title: 'Assertion statement of MorphQPV',
           key: '3_1_assertion_statement',
           icon: <CarryOutOutlined />,
         },
       ],
     },
     {
-      title: 'Janus-FEM',
+      title: 'QuFEM',
       key: '4',
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Readout calibration of Janus-FEM on quantum simulators',
+          title: 'Readout calibration of QuFEM on quantum simulators',
           key: '4_1_readout_calibration_simulator',
           icon: <CarryOutOutlined />,
         },
         {
-          title: 'Readout calibration of Janus-FEM on real quantum devices',
+          title: 'Readout calibration of QuFEM on real quantum devices',
           key: '4_2_readout_calibration_realqc',
           icon: <CarryOutOutlined />,
         },
       ],
     },
     {
-      title: 'Janus-SAT',
+      title: 'HyQSAT',
       key: '5',
       icon: <CarryOutOutlined />,
       children: [
@@ -112,7 +112,7 @@ export default function Demonstrations() {
       ],
     },
     {
-      title: 'Janus-QAOA',
+      title: 'Choco-Q',
       key: '6',
       icon: <CarryOutOutlined />,
       children: [
