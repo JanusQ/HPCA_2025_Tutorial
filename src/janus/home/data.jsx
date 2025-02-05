@@ -77,9 +77,8 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() => {
-              downloadPdfWithProgress("slide/1_1_Introduction", "1_1_Introduction")
-              downloadPdfWithProgress("slide/1_2_Background", "1_2_Background")
-              downloadPdfWithProgress("slide/1_3_Installing_JanusQ", "1_3_Installing_JanusQ")
+              downloadPdfWithProgress("slide/0_Prologue", "0_Prologue")
+              downloadPdfWithProgress("slide/1_Introduction", "1_Introduction")
             }
           }
         >
@@ -152,10 +151,10 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        3. MorphQPV Details (TBD)
+        3. MorphQPV Details
       </div>
     ),
-    Presenter: "Debin Xiang",
+    Presenter: "Siwei Tan",
     Resource: (
       <span>
         <Tag
@@ -197,7 +196,7 @@ export const dataSource = [
         4. QuFEM Details
       </div>
     ),
-    Presenter: "Tianyao Chu",
+    Presenter: "Kaiwen Zhou",
     Resource: (
       <span>
         <Tag
@@ -234,7 +233,7 @@ export const dataSource = [
         5. HyQSAT Details
       </div>
     ),
-    Presenter: "Siwei Tan",
+    Presenter: "Tianyao Chu",
     Resource: (
       <span>
         <Tag
@@ -276,7 +275,7 @@ export const dataSource = [
         6. Choco-Q Details (TBD)
       </div>
     ),
-    Presenter: "Debin Xiang",
+    Presenter: "Liqiang Lu",
     Resource: (
       <span>
         <Tag
@@ -453,4 +452,5 @@ export const participantData = [
   "Hanyu Zhang",
   "Congliang Lang",
   "Debing Xiang",
+  "Kaiwen Zhou",
 ]

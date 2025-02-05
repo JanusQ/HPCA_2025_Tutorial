@@ -10,19 +10,14 @@ import { downloadPdf, downloadPdfWithProgress } from '@/utils/utils'
 export default function Resources() {
   const slides = [
     {
-      title: '1.1. Introduction',
-      pdf: 'slide/1_1_Introduction',
-      download_name: '1_1_Introduction',
+      title: '0. Prolouge',
+      pdf: 'slide/0_Prolouge',
+      download_name: '0_Prolouge',
     },
     {
-      title: '1.2. Background',
-      pdf: 'slide/1_2_Background',
-      download_name: '1_2_Background',
-    },
-    {
-      title: '1.3. Installing JanusQ',
-      pdf: 'slide/1_3_Installing_JanusQ',
-      download_name: '1_3_Installing_JanusQ',
+      title: '1. Introduction',
+      pdf: 'slide/1_Introduction',
+      download_name: '1_Introduction',
     },
     {
       title: '2. QuCT',
@@ -30,7 +25,7 @@ export default function Resources() {
       download_name: '2_QuCT',
     },
     {
-      title: '3. MorphQPV (TBD)',
+      title: '3. MorphQPV',
       pdf: 'slide/3_MorphQPV',
       download_name: '3_MorphQPV',
     },
