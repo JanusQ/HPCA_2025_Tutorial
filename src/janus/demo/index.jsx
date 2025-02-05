@@ -76,8 +76,8 @@ export default function Demonstrations() {
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Assertion statement of MorphQPV',
-          key: '3_1_assertion_statement',
+          title: 'Verify Quantum Program',
+          key: '3_1_verify_quantum_program',
           icon: <CarryOutOutlined />,
         },
       ],
@@ -117,8 +117,13 @@ export default function Demonstrations() {
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Constained binary optimization with QAOA',
-          key: '6_1_solve_constained_binary_optimization_problem',
+          title: 'Small-scale constained binary optimization with QAOA',
+          key: '6_1_constrained_binary_optimization_small',
+          icon: <CarryOutOutlined />,
+        },
+        {
+          title: 'Large-scale constained binary optimization with QAOA',
+          key: '6_2_constrained_binary_optimization_large',
           icon: <CarryOutOutlined />,
         },
       ],
