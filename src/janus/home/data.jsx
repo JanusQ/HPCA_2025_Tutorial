@@ -221,6 +221,48 @@ export const dataSource = [
     Time: "0.25 hour",
     Agenda: "Readout calibration using QuFEM",
   },
+  // {
+  //   key: "13",
+  //   Time: (
+  //     <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+  //       0.5 hour
+  //     </div>
+  //   ),
+  //   Agenda: (
+  //     <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+  //       5. HyQSAT Details
+  //     </div>
+  //   ),
+  //   Presenter: "Tianyao Chu",
+  //   Resource: (
+  //     <span>
+  //       <Tag
+  //         color={"green"}
+  //         style={{ cursor: "pointer" }}
+  //         onClick={() =>
+  //           downloadPdfWithProgress("slide/5_HyQSAT", "5_HyQSAT")
+  //         }
+  //       >
+  //         slide
+  //       </Tag>
+  //     </span>
+  //   ),
+  // },
+  // {
+  //   key: "14",
+  //   Time: "0.125 hour",
+  //   Agenda: "Introduction of SAT problem",
+  // },
+  // {
+  //   key: "15",
+  //   Time: "0.25 hour",
+  //   Agenda: "HyQSAT overview",
+  // },
+  // {
+  //   key: "16",
+  //   Time: "0.125 hour",
+  //   Agenda: "Achieving speedup on real-world problems",
+  // },
   {
     key: "13",
     Time: (
@@ -230,49 +272,7 @@ export const dataSource = [
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        5. HyQSAT Details
-      </div>
-    ),
-    Presenter: "Tianyao Chu",
-    Resource: (
-      <span>
-        <Tag
-          color={"green"}
-          style={{ cursor: "pointer" }}
-          onClick={() =>
-            downloadPdfWithProgress("slide/5_HyQSAT", "5_HyQSAT")
-          }
-        >
-          slide
-        </Tag>
-      </span>
-    ),
-  },
-  {
-    key: "14",
-    Time: "0.125 hour",
-    Agenda: "Introduction of SAT problem",
-  },
-  {
-    key: "15",
-    Time: "0.25 hour",
-    Agenda: "HyQSAT overview",
-  },
-  {
-    key: "16",
-    Time: "0.125 hour",
-    Agenda: "Achieving speedup on real-world problems",
-  },
-  {
-    key: "17",
-    Time: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.5 hour
-      </div>
-    ),
-    Agenda: (
-      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        6. Choco-Q Details (TBD)
+        5. Choco-Q Details
       </div>
     ),
     Presenter: "Liqiang Lu",
@@ -291,97 +291,35 @@ export const dataSource = [
     ),
   },
   {
-    key: "18",
+    key: "14",
     Time: "0.125 hour",
     Agenda: "Introduction of constained binary optimization problem",
   },
   {
-    key: "19",
+    key: "15",
     Time: "0.25 hour",
     Agenda: "Choco-Q overview",
   },
   {
-    key: "20",
+    key: "16",
     Time: "0.125 hour",
-    Agenda: "Achieving speedup on real-world problems",
+    Agenda: "Solve real-world problems with Choco-Q",
   },
   {
-    key: "21",
+    key: "17",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.75 hour
+        0.25 hour
       </div>
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        7. Q & A
+        6. Q & A
       </div>
     ),
-    Presenter: "Siwei Tan",
+    Presenter: "All",
   },
 ]
-// export const dataSource1 = [
-//   {
-//     key: "1",
-//     Topic: "Topic-2. QuCT Details",
-//     hour: "(2 hour)",
-//   },
-//   {
-//     key: "2",
-//     Topic: "\xa0  \xa0 \xa0 \xa0(a) Vectorization model and code examples",
-//     hour: "0.5 hour",
-//     indentSize: 20,
-//   },
-//   {
-//     key: "3",
-//     Topic: " \xa0  \xa0 \xa0 \xa0(b) Fidelity optimization using gate vectors",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "4",
-//     Topic: "\xa0  \xa0 \xa0 \xa0(c) Unitary decomposition using gate vectors",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "5",
-//     Topic:
-//       " \xa0  \xa0 \xa0 \xa0(d) Extending the framework yourself: other downstream tasks!",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "6",
-//     Topic: "Topic-3. Implementing quantum applications",
-//     hour: "(1.25 hour)",
-//   },
-//   {
-//     key: "7",
-//     Topic:
-//       "\xa0  \xa0 \xa0 \xa0(a) Introduction of SAT problem and time crystal",
-//     hour: "0.25 hour",
-//   },
-//   {
-//     key: "8",
-//     Topic:
-//       "\xa0  \xa0 \xa0 \xa0(b) Compilation optimizations for solving SAT problems",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "9",
-//     Topic:
-//       "\xa0  \xa0 \xa0 \xa0(c) Simulate time crystal on Janus quantum platform",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "10",
-//     Topic: "Topic-4. Q & A",
-//     hour: "0.5 hour",
-//   },
-//   {
-//     key: "11",
-//     Topic: "Total",
-//     hour: "4 hours(half day)",
-//   },
-// ]
 export const paperData = [
   {
     title: `[MICRO 2023] QuCT: A Framework for Analyzing Quantum Circuit by Extracting Contextual and Topological Features`,
@@ -404,17 +342,17 @@ export const paperData = [
     pdf: "paper/ASPLOS_2024_QuFEM",
     download_name: "ASPLOS_2024_QuFEM",
   },
+  // {
+  //   title: `[HPCA 2023] HyQSAT: A Hybrid Approach for 3-SAT Problems by Integrating Quantum Annealer with CDCL`,
+  //   team: `Siwei Tan, Mingqian Yu, Andre Python, Yongheng Shang, Tingting Li, Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
+  //   link: "https://ieeexplore.ieee.org/document/10071022",
+  //   pdf: "paper/HPCA_2023_HyQSAT",
+  //   download_name: "HPCA_2023_HyQSAT",
+  // },
   {
-    title: `[HPCA 2023] HyQSAT: A Hybrid Approach for 3-SAT Problems by Integrating Quantum Annealer with CDCL`,
-    team: `Siwei Tan, Mingqian Yu, Andre Python, Yongheng Shang, Tingting Li, Liqiang Lu, and Jianwei Yin (Zhejiang University)`,
-    link: "https://ieeexplore.ieee.org/document/10071022",
-    pdf: "paper/HPCA_2023_HyQSAT",
-    download_name: "HPCA_2023_HyQSAT",
-  },
-  {
-    title: `[HPCA 2025] Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization (Accepted)`,
+    title: `[HPCA 2025] Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization`,
     team: `Debin Xiang, Qifan Jiang, Liqiang Lu, Siwei Tan, Jianwei Yin (Zhejiang University)`,
-    link: "https://ieeexplore.ieee.org/document/TBD",
+    link: "https://hpca-conf.org/2025/main-program",
     pdf: "paper/HPCA_2025_Choco-Q",
     download_name: "HPCA_2025_Choco-Q",
   },

@@ -34,15 +34,15 @@ export default function Resources() {
       pdf: 'slide/4_QuFEM',
       download_name: '4_QuFEM',
     },
+    // {
+    //   title: '5. HyQSAT',
+    //   pdf: 'slide/5_HyQSAT',
+    //   download_name: '5_HyQSAT',
+    // },
     {
-      title: '5. HyQSAT',
-      pdf: 'slide/5_HyQSAT',
-      download_name: '5_HyQSAT',
-    },
-    {
-      title: '6. Choco-Q (TBD)',
-      pdf: 'slide/6_Choco-Q',
-      download_name: '6_Choco-Q',
+      title: '5. Choco-Q (TBD)',
+      pdf: 'slide/5_Choco-Q',
+      download_name: '5_Choco-Q',
     },
   ]
   // const videos = [

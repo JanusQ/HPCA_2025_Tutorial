@@ -99,31 +99,26 @@ export default function Demonstrations() {
         },
       ],
     },
+    // {
+    //   title: 'HyQSAT',
+    //   key: '5',
+    //   icon: <CarryOutOutlined />,
+    //   children: [
+    //     {
+    //       title: 'Hybrid quantum-classical SAT solver',
+    //       key: '5_1_solve_sat_domain_problem',
+    //       icon: <CarryOutOutlined />,
+    //     },
+    //   ],
+    // },
     {
-      title: 'HyQSAT',
+      title: 'Choco-Q',
       key: '5',
       icon: <CarryOutOutlined />,
       children: [
         {
-          title: 'Hybrid quantum-classical SAT solver',
-          key: '5_1_solve_sat_domain_problem',
-          icon: <CarryOutOutlined />,
-        },
-      ],
-    },
-    {
-      title: 'Choco-Q',
-      key: '6',
-      icon: <CarryOutOutlined />,
-      children: [
-        {
-          title: 'Small-scale constained binary optimization with QAOA',
-          key: '6_1_constrained_binary_optimization_small',
-          icon: <CarryOutOutlined />,
-        },
-        {
-          title: 'Large-scale constained binary optimization with QAOA',
-          key: '6_2_constrained_binary_optimization_large',
+          title: 'Constained binary optimization with QAOA',
+          key: '5_1_constrained_binary_optimization',
           icon: <CarryOutOutlined />,
         },
       ],
