@@ -40,7 +40,7 @@ export default function Resources() {
     //   download_name: '5_HyQSAT',
     // },
     {
-      title: '5. Choco-Q (TBD)',
+      title: '5. Choco-Q',
       pdf: 'slide/5_Choco-Q',
       download_name: '5_Choco-Q',
     },

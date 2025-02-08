@@ -282,7 +282,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() =>
-            downloadPdfWithProgress("slide/6_Choco-Q", "6_Choco-Q")
+            downloadPdfWithProgress("slide/5_Choco-Q", "5_Choco-Q")
           }
         >
           slide
