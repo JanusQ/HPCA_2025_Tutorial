@@ -3,6 +3,7 @@ import jianweiyin from "@/assets/image/janus_swiper/jianweiyin.png"
 import liqianglu from "@/assets/image/janus_swiper/liqianglu.jpg"
 import tansiwei from "@/assets/image/janus_swiper/tansiwei.png"
 import tianyaochu from "@/assets/image/janus_swiper/tianyaochu.jpg"
+import kaiwenzhou from "@/assets/image/janus_swiper/kaiwenzhou.jpg"
 import { downloadPdfWithProgress } from "@/utils/utils"
 export const columns = [
   {
@@ -374,13 +375,19 @@ export const speakerData = [
     name: "Siwei Tan",
     photo: tansiwei,
     introduce:
-      "Siwei Tan is a 5th year PhD student at Zhejiang University. His interests include the quantum algorithm and computer architecture. He has published more than 14 papers in top journals and conferences, including MICRO, HPCA, ASPLOS, DAC, VIS and TVCG.",
+      "Siwei Tan is a tenure-track assistant professor in the School of Software Technology, Zhejiang University (ZJU), China. He is interested in the quantum software, quantum hardware, and machine learning. He has developed the quantum control system that is deployed on the 121-qubit quantum hardware. He has published more than 20 papers in top international journals and conferences such as ASPLOS, MICRO, HPCA, DAC, ICCAD, FSE, TVCG, et al.",
   },
   {
     name: "Tianyao Chu",
     photo: tianyaochu,
     introduce:
       "Tianyao Chu is a first year PhD student at Zhejiang University. His interests include multinode quantum computing and quantum communication network. His project was funded by National Natural Science Foundation of China - the first Basic Research Project for Young Students (Undergraduate).",
+  },
+  {
+    name: "Kaiwen Zhou",
+    photo: kaiwenzhou,
+    introduce:
+      "Kaiwen Zhou is a first-year PhD student at Zhejiang University. He is interested in quantum computer architecture and high-performance computing. He is currently working on designing a QLDPC decoding accelerator.",
   },
 ]
 export const participantData = [
@@ -390,5 +397,4 @@ export const participantData = [
   "Hanyu Zhang",
   "Congliang Lang",
   "Debing Xiang",
-  "Kaiwen Zhou",
 ]
