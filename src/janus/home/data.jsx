@@ -78,7 +78,7 @@ export const dataSource = [
           color={"green"}
           style={{ cursor: "pointer" }}
           onClick={() => {
-              downloadPdfWithProgress("slide/0_Prologue", "0_Prologue")
+              // downloadPdfWithProgress("slide/0_Prologue", "0_Prologue")
               downloadPdfWithProgress("slide/1_Introduction", "1_Introduction")
             }
           }

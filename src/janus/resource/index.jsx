@@ -9,11 +9,11 @@ import { downloadPdf, downloadPdfWithProgress } from '@/utils/utils'
 
 export default function Resources() {
   const slides = [
-    {
-      title: '0. Prolouge',
-      pdf: 'slide/0_Prolouge',
-      download_name: '0_Prolouge',
-    },
+    // {
+    //   title: '0. Prolouge',
+    //   pdf: 'slide/0_Prolouge',
+    //   download_name: '0_Prolouge',
+    // },
     {
       title: '1. Introduction',
       pdf: 'slide/1_Introduction',
