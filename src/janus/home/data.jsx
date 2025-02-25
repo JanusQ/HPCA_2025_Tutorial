@@ -9,7 +9,7 @@ export const columns = [
   {
     title: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        Time (TBD)
+        Time
       </div>
     ),
     dataIndex: "Time",
@@ -63,7 +63,7 @@ export const dataSource = [
     key: "1",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.5 hour
+        1:00pm - 1:30pm
       </div>
     ),
     Agenda: (
@@ -92,7 +92,7 @@ export const dataSource = [
     key: "2",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        1 hour
+        1:30pm - 2:15pm
       </div>
     ),
     Agenda: (
@@ -117,17 +117,17 @@ export const dataSource = [
   },
   {
     key: "3",
-    Time: "0.25 hour",
+    Time: "15 min",
     Agenda: "Vectorization model and code examples",
   },
   {
     key: "4",
-    Time: "0.5 hour",
+    Time: "15 min",
     Agenda: "Fidelity optimization & Unitary decomposition using gate vectors",
   },
   {
     key: "5",
-    Time: "0.25 hour",
+    Time: "15 min",
     Agenda: "Extending the framework by yourself: other downstream tasks!",
   },
   // {
@@ -147,7 +147,7 @@ export const dataSource = [
     key: "6",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        1.25 hour
+        2:15pm - 3:00pm
       </div>
     ),
     Agenda: (
@@ -172,24 +172,38 @@ export const dataSource = [
   },
   {
     key: "7",
-    Time: "0.5 hour",
+    Time: "15 min",
     Agenda: "MorphQPV overview",
   },
   {
     key: "8",
-    Time: "0.25 hour",
+    Time: "15 min",
     Agenda: "Assertion statement",
   },
   {
     key: "9",
-    Time: "0.5 hour",
-    Agenda: "Implementation details of the automatic verification and repair",
+    Time: "15 min",
+    Agenda: "Implementation details of automatic verification and repair",
   },
   {
     key: "10",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.5 hour
+        3:00pm - 3:30pm
+      </div>
+    ),
+    Agenda: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        Afternoon break
+      </div>
+    ),
+    Presenter: "",
+  },
+  {
+    key: "11",
+    Time: (
+      <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
+        3:30pm - 4:00pm
       </div>
     ),
     Agenda: (
@@ -213,13 +227,13 @@ export const dataSource = [
     ),
   },
   {
-    key: "11",
-    Time: "0.25 hour",
+    key: "12",
+    Time: "15 min",
     Agenda: "Characterization of readout error",
   },
   {
-    key: "12",
-    Time: "0.25 hour",
+    key: "13",
+    Time: "15 min",
     Agenda: "Readout calibration using QuFEM",
   },
   // {
@@ -265,10 +279,10 @@ export const dataSource = [
   //   Agenda: "Achieving speedup on real-world problems",
   // },
   {
-    key: "13",
+    key: "14",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.5 hour
+        4:00pm - 4:45pm
       </div>
     ),
     Agenda: (
@@ -292,30 +306,30 @@ export const dataSource = [
     ),
   },
   {
-    key: "14",
-    Time: "0.125 hour",
+    key: "15",
+    Time: "15 min",
     Agenda: "Introduction of constained binary optimization problem",
   },
   {
-    key: "15",
-    Time: "0.25 hour",
+    key: "16",
+    Time: "15 min",
     Agenda: "Choco-Q overview",
   },
   {
-    key: "16",
-    Time: "0.125 hour",
+    key: "17",
+    Time: "15 min",
     Agenda: "Solve real-world problems with Choco-Q",
   },
   {
-    key: "17",
+    key: "18",
     Time: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        0.25 hour
+        4:45pm - 5:00pm
       </div>
     ),
     Agenda: (
       <div style={{ fontWeight: 800, fontFamily: "PingFang_HEAVY" }}>
-        6. Q & A
+        Q & A
       </div>
     ),
     Presenter: "All",
