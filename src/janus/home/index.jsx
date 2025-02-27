@@ -208,13 +208,26 @@ export default function JanusHomePage() {
                   </div>
                   <div className="home_link_content">
                     <div className="home_link_outlined">
-                      <h4>JanusQ cloud:</h4>
+                      <h4>JanusQ Cloud (accessible by campus network of Zhejiang University):</h4>
                       <a
                         href="http://janusq.zju.edu.cn"
                         target="_blank"
                         rel="noreferrer"
                       >
                         janusq.zju.edu.cn
+                        <span className="LinkOutlined">
+                          <LinkOutlined />
+                        </span>
+                      </a>
+                    </div>
+                    <div className="home_link_outlined">
+                      <h4>JanusQ Cloud (accessible by public network during our tutorial):</h4>
+                      <a
+                        href="http://193.112.219.143:10211/home"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        193.112.219.143:10211/home
                         <span className="LinkOutlined">
                           <LinkOutlined />
                         </span>
