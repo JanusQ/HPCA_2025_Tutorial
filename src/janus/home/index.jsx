@@ -181,7 +181,7 @@ export default function JanusHomePage() {
                     It is our second time to hold this tutorial! We have hosted the tutorial at ASPLOS'24 in San Diego, USA.
                   </div>
                   <div className="home_overview_supplement">
-                    Our tutorial will take place on March 2, 2025 at Mesquite 3, Westin Las Vegas from 1:00pm to 5:00pm.
+                    Our tutorial will take place on March 2, 2025 at Room Wisteria, Westin Las Vegas from 1:00pm to 5:00pm.
                   </div>
                 </div>
                 <Divider />
