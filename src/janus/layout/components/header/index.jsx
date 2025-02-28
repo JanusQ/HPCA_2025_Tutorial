@@ -8,7 +8,7 @@ import { MenuOutlined } from '@ant-design/icons'
 
 const menuData = [
   { key: 1, name: "Home", link: <Link to="/home">Home</Link> },
-  { key: 2, name: "JanusQ", link: <a href="http://193.112.219.143:10211/home" target="_blank" rel="noreferrer">JanusQ</a> },
+  { key: 2, name: "JanusQ", link: <a href="http://119.28.54.252:10211/home" target="_blank" rel="noreferrer">JanusQ</a> },
   { key: 3, name: "Demo", link: <Link to="/demo">Demo</Link> },
   { key: 4, name: "Resource", link: <Link to="/resource">Resource</Link> },
   { key: 5, name: "Github", link: <a href="https://github.com/JanusQ/JanusQ" target="_blank" rel="noreferrer">Github</a> },

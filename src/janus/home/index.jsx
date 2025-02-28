@@ -223,11 +223,11 @@ export default function JanusHomePage() {
                     <div className="home_link_outlined">
                       <h4>JanusQ Cloud (accessible by public network during our tutorial):</h4>
                       <a
-                        href="http://193.112.219.143:10211/home"
+                        href="http://119.28.54.252:10211/home"
                         target="_blank"
                         rel="noreferrer"
                       >
-                        193.112.219.143:10211/home
+                        119.28.54.252:10211/home
                         <span className="LinkOutlined">
                           <LinkOutlined />
                         </span>
