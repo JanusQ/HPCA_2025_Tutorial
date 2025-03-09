@@ -366,7 +366,7 @@ export const paperData = [
   // },
   {
     title: `[HPCA 2025] Choco-Q: Commute Hamiltonian-based QAOA for Constrained Binary Optimization`,
-    team: `Debin Xiang, Qifan Jiang, Liqiang Lu, Siwei Tan, Jianwei Yin (Zhejiang University)`,
+    team: `Debin Xiang, Qifan Jiang, Liqiang Lu, Siwei Tan, and Jianwei Yin (Zhejiang University)`,
     link: "https://hpca-conf.org/2025/main-program",
     pdf: "paper/HPCA_2025_Choco-Q",
     download_name: "HPCA_2025_Choco-Q",
